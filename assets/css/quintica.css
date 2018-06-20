@@ -1,0 +1,135 @@
+/*To change this license header, choose License Headers in Project Properties.To change this template file, choose Tools | Templatesand open the template in the editor.*/
+/*Created on : Jun 19, 2018, 3:28:23 PMAuthor : Vishval*/
+
+/*Add task view.php page css*/
+.customLegend {
+	border: 1px solid #e5e5e5;
+	padding: 1.5em 0 1em;
+	margin-top: 0.5em;
+	position: relative;
+	margin-bottom: 1.5em;
+}
+.customLegend legend {
+	border: 0;
+	background: #fff;
+	width: auto;
+	transform: translateY(-50%);
+	position: absolute;
+	top: 0;
+	left: 1em;
+	color: #d61f27;
+	padding: 0 .5em;
+	font-size: 15px;
+	font-weight: 500;
+}
+.customLegend .checkbox-inline {
+	margin-left:0px;
+	padding-left: 15px;
+}
+/* end */
+
+
+/* AssetRoutingView.php page css*/
+.map-frame {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.map-content {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #00000042;
+	color: #222;
+	height: 90px;
+	padding: 5px;
+}
+.hgt100vh {
+	height:100vh;
+}
+/* End asset routing*/
+
+
+/* CompanyAddView.php page css */
+#Add_Entity label.error {
+	color: #FB3A3A;
+	display: inline-block;
+	padding: 0;
+	text-align: left;
+	width: 220px;
+}
+.hidefieldhold .brd1 {
+	border: 1px solid #ddd;
+	margin-top: 12px;
+	margin-bottom: 18px;
+	padding: 8px;
+}
+.hidefieldhold .form-control {
+	border: none;
+	margin-bottom: 0px;
+	clear: both;
+}
+.advancedbtn {
+	font-size: 15px;
+	border-bottom: 1px solid #337ab7;
+	padding-bottom: 2px;
+}
+.hidefieldhold .form-check label{
+	position: relative;
+	cursor: pointer;
+	color: #666;
+	font-size: 22px;
+}
+/* end */
+
+
+/* CompanyEditView.php page css*/
+.hidefieldhold .brd1 {
+	border: 1px solid #ddd;
+	margin-top: 12px;
+	margin-bottom: 18px;
+	padding: 8px;
+}
+.hidefieldhold .form-control {
+	border: none;
+	margin-bottom: 0px;
+	clear: both;
+}
+.advancedbtn {
+	/* color: #337ab7;
+	*/
+	font-size: 15px;
+	border-bottom: 1px solid #337ab7;
+	padding-bottom: 2px;
+}
+/* end */
+
+
+/* TaskListView.php page css*/
+#rowtabs .tab-content, #rowtabs .table, #rowtabs .nav-tabs>li.active>a {
+	background: #ececec;
+}
+#rowtabs .table>tbody>tr>td {
+	border-top:1px solid #d6d6d6;
+	color:#051a2f;
+}
+#rowtabs .nav-tabs>li.active>a {
+	font-weight: bold;
+	color: #2a3f54;
+}
+/* end */
+
+
+
+/* TaskReportTemplateView.php */
+.wrapper h3 {
+    color: #d61f27;
+    font-size: 20px;
+}
+
+.wrapper h4 {
+    color: #000000;
+}
+/* end */

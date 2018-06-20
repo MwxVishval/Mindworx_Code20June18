@@ -1,0 +1,1570 @@
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '7786cd6516065e92392de8ad43d5b50c'
+AND `id` = '48'
+SELECT count(qm_task.status_id) as total, `qm_status_type`.`status_type` as `type`, `qm_status_type`.`id` as `statusId`
+FROM `qm_status_type`
+LEFT JOIN `qm_task` ON `qm_status_type`.`id` = `qm_task`.`status_id` and `qm_task`.`task_status`=1 and `qm_task`.`fse_id`=48
+GROUP BY `qm_status_type`.`id`
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '7786cd6516065e92392de8ad43d5b50c'
+SELECT *
+FROM `qm_mobile_notification`
+WHERE `fse_id` = '48'
+AND `is_viewed` =0
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '7786cd6516065e92392de8ad43d5b50c'
+AND `id` = '48'
+SELECT count(qm_task.status_id) as total, `qm_status_type`.`status_type` as `type`, `qm_status_type`.`id` as `statusId`
+FROM `qm_status_type`
+LEFT JOIN `qm_task` ON `qm_status_type`.`id` = `qm_task`.`status_id` and `qm_task`.`task_status`=1 and `qm_task`.`fse_id`=48
+GROUP BY `qm_status_type`.`id`
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+UPDATE `qm_task` SET `fse_feedback` = 'Ddddddd', `is_Machine_operational` = 'on', `paper` = 'on', `toner` = 'on', `endreading` = '22', `startreading` = '25', `location_code` = 'Feed Roller', `section_code` = 'Document Feeder', `action_code` = 'Cannibalise', `close_code` = 'Solved Remotely (Permanently)', `start_reading_black` = '12', `end_reading_black` = '15', `docketnumber` = 'Manual d n', `book_code` = 'Booking code', `kilometer_travelled` = '1235'
+WHERE `id` = '86'
+SELECT *
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+WHERE `qm_task`.`id` = '86'
+INSERT INTO `qm_task_create_log` (`task_log`, `task_name`, `apiname`, `api_response`) VALUES ('{\"u_action_code\":\"Cannibalise\",\"u_section_code\":\"Document Feeder\",\"u_location_code\":\"Feed Roller\",\"u_close_code\":\"Solved Remotely (Permanently)\",\"u_startreading\":\"12\",\"u_endreading\":\"15\",\"u_startreading_color\":\"25\",\"u_endreading_color\":\"22\",\"u_fse_task_comments\":\"Ddddddd\",\"u_book_code\":\"Booking code\",\"u_manual_docket_number\":\"Manual d n\",\"u_task_name\":\"TASK0031489\",\"u_actual_distance_travelled\":\"1235\",\"u_is_machine_operational\":\"YES\",\"u_toner\":\"YES\",\"u_paper\":\"YES\"}', 'TASK0031489', 'resolution', '\"{\\\"result\\\":{\\\"sys_import_state_comment\\\":\\\"\\\",\\\"sys_import_state\\\":\\\"updated\\\"}}\"')
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_action_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '6', 'Click on task Completed')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT *, `qm_task_location`.`task_location` as `task_location`, `qm_task`.`id` as `taskid`, `qm_task_location`.`geo_km` as `Goegle_KM`
+FROM `qm_task`
+LEFT JOIN `qm_task_location` ON `qm_task_location`.`task_id` = `qm_task`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_sla` ON `qm_task`.`sla_id` = `qm_sla`.`id`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_incident` ON `qm_task`.`incident_id` = `qm_incident`.`id`
+LEFT JOIN `qm_project` ON `qm_task`.`project_id` = `qm_project`.`id`
+LEFT JOIN `qm_entity` ON `qm_task`.`ent_id` = `qm_entity`.`id`
+LEFT JOIN `qm_branch` ON `qm_task`.`branch_id` = `qm_branch`.`id`
+WHERE `qm_task`.`id` = '86'
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_view_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '3', 'Task Details')
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_action_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '3', 'Click on tasklist')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT `task_complete_fields`
+FROM `qm_entity`
+WHERE `id` = '1'
+===[took:0]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT `task_field`
+FROM `qm_entity`
+WHERE `qm_entity`.`id` = '1'
+===[took:0]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT `productline`
+FROM `qm_task`
+WHERE `id` = '86'
+SELECT *
+FROM `qm_action_code`
+WHERE `dependent_value` = 'Duplicator'
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT `productline`
+FROM `qm_task`
+WHERE `id` = '86'
+SELECT *
+FROM `qm_section_code`
+WHERE `dependent_value` = 'Duplicator'
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT *
+FROM `qm_close_code`
+===[took:0]
+
+SELECT `qm_fse_details`.*, `qm_entity`.`entity_color`
+FROM `qm_fse_details`
+LEFT JOIN `qm_entity` ON `qm_fse_details`.`ent_id` = `qm_entity`.`id`
+WHERE `fse_status` = 1
+AND `fse_username` = 'Sathish123'
+AND `fse_password` = 'sathish123'
+UPDATE `qm_fse_details` SET `fse_token` = '2c4a66c37a04653209a84dd71a046edd', `fse_device_id` = 'ej7xhfMc5MA:APA91bGwzy--kRMKnhCY7sod7zIwsFetrG-dXPo0PA9YazER2QLLmjKmX0ParHOWKPcatsoh_EkQwDRa0NvqsI7mKwHD62bQ9-pTqIfMK0M-AU43o0xauhJi8ieNnm6fqJFDnm_O8Z9z', `fse_device_os` = 'Android'
+WHERE `id` = '52'
+===[took:0.003]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+AND `id` = '52'
+SELECT count(qm_task.status_id) as total, `qm_status_type`.`status_type` as `type`, `qm_status_type`.`id` as `statusId`
+FROM `qm_status_type`
+LEFT JOIN `qm_task` ON `qm_status_type`.`id` = `qm_task`.`status_id` and `qm_task`.`task_status`=1 and `qm_task`.`fse_id`=52
+GROUP BY `qm_status_type`.`id`
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+SELECT *
+FROM `qm_mobile_notification`
+WHERE `fse_id` = '52'
+AND `is_viewed` =0
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+AND `id` = '52'
+SELECT count(qm_task.status_id) as total, `qm_status_type`.`status_type` as `type`, `qm_status_type`.`id` as `statusId`
+FROM `qm_status_type`
+LEFT JOIN `qm_task` ON `qm_status_type`.`id` = `qm_task`.`status_id` and `qm_task`.`task_status`=1 and `qm_task`.`fse_id`=52
+GROUP BY `qm_status_type`.`id`
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+SELECT *, `qm_task`.`id` as `taskid`
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_status_type`.`id` = `qm_task`.`status_id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+WHERE `qm_task`.`task_status` = 1
+AND `qm_task`.`fse_id` = '52'
+AND `qm_task`.`status_id` = '1'
+AND `qm_task`.`created_date` BETWEEN DATE_SUB(NOW(), INTERVAL 15 DAY) AND NOW()
+ORDER BY `qm_task`.`priority` ASC
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '52'
+INSERT INTO `qm_fse_view_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('52', '1', '2', 'TaskList')
+===[took:0.003]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+SELECT *, `qm_task_location`.`task_location` as `task_location`, `qm_task`.`id` as `taskid`, `qm_task_location`.`geo_km` as `Goegle_KM`
+FROM `qm_task`
+LEFT JOIN `qm_task_location` ON `qm_task_location`.`task_id` = `qm_task`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_sla` ON `qm_task`.`sla_id` = `qm_sla`.`id`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_incident` ON `qm_task`.`incident_id` = `qm_incident`.`id`
+LEFT JOIN `qm_project` ON `qm_task`.`project_id` = `qm_project`.`id`
+LEFT JOIN `qm_entity` ON `qm_task`.`ent_id` = `qm_entity`.`id`
+LEFT JOIN `qm_branch` ON `qm_task`.`branch_id` = `qm_branch`.`id`
+WHERE `qm_task`.`id` = '49'
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '52'
+INSERT INTO `qm_fse_view_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('52', '1', '3', 'Task Details')
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '52'
+INSERT INTO `qm_fse_action_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('52', '1', '3', 'Click on tasklist')
+===[took:0.003]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+SELECT `task_field`
+FROM `qm_entity`
+WHERE `qm_entity`.`id` = '1'
+===[took:0]
+
+no queries
+UPDATE `qm_task` SET `status_id` = 5
+WHERE `task_name` = 'TASK0031405'
+===[took:0.003]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+UPDATE `qm_task` SET updated_date = NOW(), `status_id` = 3
+WHERE `id` = '49'
+INSERT INTO `qm_task_create_log` (`task_log`, `task_name`, `apiname`, `api_response`) VALUES ('3', '49', 'status test by cgvak', 'updatetaskStatusAccept')
+SELECT *
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+WHERE `qm_task`.`id` = '49'
+INSERT INTO `qm_task_create_log` (`task_log`, `task_name`, `apiname`, `api_response`) VALUES ('{\"u_task_name\":\"TASK0031405\",\"u_status_id\":\"Accept\",\"u_fse_task_comments\":\"Vv\",\"u_fse_reason\":\"Awaiting_Quote_acceptance\"}', 'TASK0031405', 'status Update', '\"{\\\"result\\\":{\\\"sys_import_state_comment\\\":\\\"\\\",\\\"sys_import_state\\\":\\\"updated\\\"}}\"')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = '2c4a66c37a04653209a84dd71a046edd'
+SELECT *, `qm_task`.`id` as `taskid`
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_status_type`.`id` = `qm_task`.`status_id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+WHERE `qm_task`.`task_status` = 1
+AND `qm_task`.`fse_id` = '52'
+AND (`qm_task`.`status_id` = 3 or `qm_task`.`status_id` = 5)
+AND `qm_task`.`created_date` BETWEEN DATE_SUB(NOW(), INTERVAL 15 DAY) AND NOW()
+ORDER BY `qm_task`.`priority` ASC
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '52'
+INSERT INTO `qm_fse_view_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('52', '1', '2', 'TaskList')
+===[took:0.002]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+UPDATE `qm_task` SET `fse_checklist` = NULL, `task_unchecklist` = NULL
+WHERE `id` = '86'
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_action_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '7', 'Click on update button')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT *, `qm_task_location`.`task_location` as `task_location`, `qm_task`.`id` as `taskid`, `qm_task_location`.`geo_km` as `Goegle_KM`
+FROM `qm_task`
+LEFT JOIN `qm_task_location` ON `qm_task_location`.`task_id` = `qm_task`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_sla` ON `qm_task`.`sla_id` = `qm_sla`.`id`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_incident` ON `qm_task`.`incident_id` = `qm_incident`.`id`
+LEFT JOIN `qm_project` ON `qm_task`.`project_id` = `qm_project`.`id`
+LEFT JOIN `qm_entity` ON `qm_task`.`ent_id` = `qm_entity`.`id`
+LEFT JOIN `qm_branch` ON `qm_task`.`branch_id` = `qm_branch`.`id`
+WHERE `qm_task`.`id` = '86'
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_view_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '3', 'Task Details')
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_action_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '3', 'Click on tasklist')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT `task_field`
+FROM `qm_entity`
+WHERE `qm_entity`.`id` = '1'
+===[took:0]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+UPDATE `qm_task` SET `fse_feedback` = 'feedback', `customer_sign` = 'data:image/png;base64,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'
+WHERE `fse_id` = '47'
+AND `id` = '86'
+===[took:0.003]
+
+no queries
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+UPDATE `qm_task` SET updated_date = NOW(), `status_id` = '4'
+WHERE `id` = '86'
+SELECT *
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+WHERE `qm_task`.`id` = '86'
+INSERT INTO `qm_task_create_log` (`task_log`, `task_name`, `apiname`, `api_response`) VALUES ('{\"u_task_name\":\"TASK0031489\",\"u_status_id\":\"Resolved\",\"u_fse_task_comments\":null,\"u_fse_reason\":null}', 'TASK0031489', 'status Update', '\"{\\\"result\\\":{\\\"sys_import_state_comment\\\":\\\"\\\",\\\"sys_import_state\\\":\\\"updated\\\"}}\"')
+INSERT INTO `qm_task_create_log` (`task_log`, `task_name`, `apiname`, `api_response`) VALUES ('4', '86', 'status test by cgvak', 'updatetaskStatus')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+UPDATE `qm_task_location` SET `geo_km` = ''
+WHERE `task_id` = '86'
+UPDATE `qm_task_location` SET `Work_completed_time` = '2017-09-13 15:36:37'
+WHERE `task_id` = '86'
+SELECT *
+FROM `qm_task_location`
+WHERE `task_id` = '86'
+ LIMIT 1
+UPDATE `qm_task_location` SET `total_worked_time` = '13:36:37'
+WHERE `task_id` = '86'
+SELECT *
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_task`.`status_id` = `qm_status_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+WHERE `qm_task`.`id` = '86'
+INSERT INTO `qm_task_create_log` (`task_log`, `task_name`, `apiname`, `api_response`) VALUES ('{\"u_task_name\":\"TASK0031489\",\"u_repair_time\":\"13:36:37\",\"u_travel_time\":null,\"u_calculated_distance\":\"\"}', 'TASK0031489', 'Time Calcution', '\"{\\\"result\\\":{\\\"sys_import_state_comment\\\":\\\"\\\",\\\"sys_import_state\\\":\\\"updated\\\"}}\"')
+===[took:0.002]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT *, `qm_task`.`id` as `taskid`
+FROM `qm_task`
+LEFT JOIN `qm_status_type` ON `qm_status_type`.`id` = `qm_task`.`status_id`
+LEFT JOIN `qm_task_location` ON `qm_task`.`id` = `qm_task_location`.`task_id`
+LEFT JOIN `qm_call_status` ON `qm_task`.`call_status` = `qm_call_status`.`id`
+LEFT JOIN `qm_call_type` ON `qm_task`.`call_type` = `qm_call_type`.`id`
+LEFT JOIN `qm_priority` ON `qm_task`.`priority` = `qm_priority`.`id`
+WHERE `qm_task`.`task_status` = 1
+AND `qm_task`.`fse_id` = '47'
+AND `qm_task`.`status_id` = '1'
+AND `qm_task`.`created_date` BETWEEN DATE_SUB(NOW(), INTERVAL 15 DAY) AND NOW()
+ORDER BY `qm_task`.`priority` ASC
+SELECT `ent_id`
+FROM `qm_fse_details`
+WHERE `id` = '47'
+INSERT INTO `qm_fse_view_page` (`fse_id`, `ent_id`, `page_id`, `page_name`) VALUES ('47', '1', '2', 'TaskList')
+===[took:0.002]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+AND `id` = '47'
+SELECT count(qm_task.status_id) as total, `qm_status_type`.`status_type` as `type`, `qm_status_type`.`id` as `statusId`
+FROM `qm_status_type`
+LEFT JOIN `qm_task` ON `qm_status_type`.`id` = `qm_task`.`status_id` and `qm_task`.`task_status`=1 and `qm_task`.`fse_id`=47
+GROUP BY `qm_status_type`.`id`
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+SELECT *
+FROM `qm_mobile_notification`
+WHERE `fse_id` = '47'
+AND `is_viewed` =0
+===[took:0.001]
+
+SELECT `id`
+FROM `qm_fse_details`
+WHERE `fse_status` = 1
+AND `fse_token` = 'a65433db51caaa356d074ffc92f8f8e2'
+AND `id` = '47'
+SELECT count(qm_task.status_id) as total, `qm_status_type`.`status_type` as `type`, `qm_status_type`.`id` as `statusId`
+FROM `qm_status_type`
+LEFT JOIN `qm_task` ON `qm_status_type`.`id` = `qm_task`.`status_id` and `qm_task`.`task_status`=1 and `qm_task`.`fse_id`=47
+GROUP BY `qm_status_type`.`id`
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+AND `qm_notification`.`notification_status` =0
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
+SELECT *
+FROM `qm_notification`
+JOIN `qm_task` ON `qm_notification`.`task_id` = `qm_task`.`id`
+JOIN `qm_status_type` ON `qm_notification`.`status_id` = `qm_status_type`.`id`
+WHERE `qm_notification`.`user_id` = '1'
+ORDER BY `qm_notification`.`id` DESC
+ LIMIT 6
+===[took:0.001]
+
